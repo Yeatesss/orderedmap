@@ -34,12 +34,12 @@ type OrderedMap struct {
 	escapeHTML bool
 }
 
-func New() *OrderedMap {
+func New() OrderedMap {
 	o := OrderedMap{}
 	o.keys = []string{}
 	o.values = map[string]interface{}{}
 	o.escapeHTML = true
-	return &o
+	return o
 }
 
 func (o *OrderedMap) SetEscapeHTML(on bool) {
